@@ -1,0 +1,22 @@
+{% extends 'base.jinja2' %}
+
+{% block content %}
+<h1>Create blog post</h1>
+<form method="POST"> <!--Form info gets sent to this url, which is routed in app.py-->
+    <div>
+        <label for='title'>Title</label> <!--New field title-->
+        <input type="text" name="title"/> <!--Self closing tag for input-->
+    </div>
+    <div>
+        <label for="author">Author</label>
+        <input type="text" name="author"/>
+    </div>
+    <div>
+        <label for="content">Content</label>
+        <textarea name="content"></textarea>
+    </div>
+    <div>
+        <input type="submit"/>
+    </div>
+</form>
+{% endblock %}
